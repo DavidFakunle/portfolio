@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "*.mzstatic.com",
       },
+      {
+        protocol: "https",
+        hostname: "images.metmuseum.org",
+      },
     ],
   },
 };

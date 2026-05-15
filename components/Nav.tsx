@@ -7,6 +7,7 @@ const tabs = [
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Music", href: "#music" },
+  { label: "Art", href: "#art" },
 ];
 
 export default function Nav() {
