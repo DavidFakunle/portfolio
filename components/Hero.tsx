@@ -101,7 +101,7 @@ export default function Hero() {
         </h1>
         <p className="font-sans text-xl text-espresso/70 leading-relaxed max-w-xl mb-10">
           CS student at the University of North Texas, building things that matter.
-          I like clean code, good music, and apps that actually work and have an impact.
+          I like clean code, good art, and apps that actually work and have an impact.
         </p>
 
         {/* CTAs */}

@@ -1,45 +1,56 @@
+import Image from "next/image";
+
 const albums = [
   {
-    title: "Ctrl",
-    artist: "SZA",
-    year: "2017",
-    appleMusic: "https://music.apple.com/us/album/ctrl/1216648904",
-    color: "#C8A882",
+    title: "BELOVED",
+    artist: "Giveon",
+    year: "2026",
+    artwork:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/47/03/4c/47034c71-831b-61a2-8cc2-502f927834bd/196873057620.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/beloved/1815356726",
   },
   {
-    title: "DAMN.",
-    artist: "Kendrick Lamar",
-    year: "2017",
-    appleMusic: "https://music.apple.com/us/album/damn/1223592280",
-    color: "#C05C3A",
+    title: "With No Due Respect",
+    artist: "FoggieRaw",
+    year: "2026",
+    artwork:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/94/c1/af/94c1af0b-1cd5-1a3a-a762-67e381c31358/26UMGIM07433.rgb.jpg/600x600bb.jpg",
+    appleMusic:
+      "https://music.apple.com/us/album/with-no-due-respect/1871674817",
   },
   {
-    title: "After Hours",
-    artist: "The Weeknd",
-    year: "2020",
-    appleMusic: "https://music.apple.com/us/album/after-hours/1500720641",
-    color: "#8B2020",
+    title: "2014 Forest Hills Drive",
+    artist: "J. Cole",
+    year: "2014",
+    artwork:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ee/28/67/ee286794-6c33-a8c2-5c37-c04f1cb5e8a6/21UM1IM54415.rgb.jpg/600x600bb.jpg",
+    appleMusic:
+      "https://music.apple.com/us/album/2014-forest-hills-drive/1600772499",
   },
   {
-    title: "Blonde",
-    artist: "Frank Ocean",
-    year: "2016",
-    appleMusic: "https://music.apple.com/us/album/blonde/1146195596",
-    color: "#D4A96A",
+    title: "Bully",
+    artist: "Ye",
+    year: "2026",
+    artwork:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4c/78/0e/4c780ef8-f9cf-62f2-b956-2ceab8b81905/0692788731278_cover.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/bully-ep/1872771948",
   },
   {
-    title: "Igor",
-    artist: "Tyler, the Creator",
-    year: "2019",
-    appleMusic: "https://music.apple.com/us/album/igor/1463892369",
-    color: "#6A8B5E",
+    title: "It's Us Vol. 2",
+    artist: "Concrete Boys",
+    year: "2026",
+    artwork:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/36/0e/28/360e284d-5d6d-1970-d500-5797488996f0/26BMR0007733.rgb.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/its-us-vol-2/1878016122",
   },
   {
-    title: "good kid, m.A.A.d city",
-    artist: "Kendrick Lamar",
-    year: "2012",
-    appleMusic: "https://music.apple.com/us/album/good-kid-m-a-a-d-city/564097170",
-    color: "#3A5E8B",
+    title: "We're All Alone in This Together",
+    artist: "Dave",
+    year: "2021",
+    artwork:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/75/65/e7756565-3351-60a3-562a-8f168f64c2b4/00602438588909_Cover.jpg/600x600bb.jpg",
+    appleMusic:
+      "https://music.apple.com/gb/album/were-all-alone-in-this-together/1839573796",
   },
 ];
 
@@ -66,7 +77,7 @@ export default function Music() {
           </p>
           <h2 className="font-serif text-4xl font-bold text-espresso">Music</h2>
           <p className="font-sans text-sm text-espresso/50 mt-2">
-            Albums I keep coming back to. Open in Apple Music.
+            What I&apos;ve been listening to this month. Open in Apple Music.
           </p>
         </div>
 
@@ -79,24 +90,15 @@ export default function Music() {
               rel="noopener noreferrer"
               className="group block"
             >
-              {/* Album art placeholder — vinyl-style circle with color */}
-              <div
-                className="relative w-full aspect-square rounded-xl mb-3 overflow-hidden transition-transform duration-300 group-hover:scale-[1.03] group-hover:shadow-xl"
-                style={{ backgroundColor: album.color }}
-              >
-                {/* Vinyl groove rings */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                  <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
-                    {[12, 22, 32, 40, 46].map((r) => (
-                      <circle key={r} cx="50" cy="50" r={r} stroke="white" strokeWidth="0.6" />
-                    ))}
-                    <circle cx="50" cy="50" r="6" fill="white" opacity="0.6" />
-                    <circle cx="50" cy="50" r="2" fill="white" />
-                  </svg>
-                </div>
-
-                {/* Apple Music icon on hover */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <div className="relative w-full aspect-square rounded-xl mb-3 overflow-hidden transition-transform duration-300 group-hover:scale-[1.03] group-hover:shadow-xl">
+                <Image
+                  src={album.artwork}
+                  alt={`${album.title} by ${album.artist}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/20">
                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
                       <path d="M23 2v20l-2-2V4L6 7v14l-2 1V5l19-3z"/>
@@ -118,11 +120,6 @@ export default function Music() {
             </a>
           ))}
         </div>
-
-        <p className="mt-10 font-sans text-xs text-espresso/30 text-center">
-          Edit the <code className="text-latte/70">albums</code> array in{" "}
-          <code className="text-latte/70">components/Music.tsx</code> to add your favorites.
-        </p>
       </div>
     </section>
   );
