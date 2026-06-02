@@ -33,7 +33,7 @@ const albums = [
     year: "2026",
     artwork:
       "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4c/78/0e/4c780ef8-f9cf-62f2-b956-2ceab8b81905/0692788731278_cover.jpg/600x600bb.jpg",
-    appleMusic: "https://music.apple.com/us/album/bully-ep/1872771948",
+    appleMusic: "https://music.apple.com/us/album/bully/1888707282",
   },
   {
     title: "It's Us Vol. 2",

@@ -93,7 +93,7 @@ export default function Experience() {
             </div>
             <div>
               <h3 className="font-serif text-lg font-semibold text-espresso">University of North Texas</h3>
-              <p className="font-sans text-sm text-espresso/60">B.S. Computer Science &middot; 3.75 GPA &middot; Dean&apos;s List</p>
+              <p className="font-sans text-sm text-espresso/60">B.S. Computer Science &middot; 3.76 GPA &middot; Dean&apos;s List</p>
               <p className="font-sans text-xs text-espresso/40 mt-0.5">NSBE &middot; ColorStack</p>
             </div>
           </div>
