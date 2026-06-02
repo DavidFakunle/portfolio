@@ -12,9 +12,13 @@ import {
   SiNumpy,
   SiTensorflow,
   SiPostgresql,
+  SiDocker,
+  SiKubernetes,
+  SiGit,
+  SiGithub,
 } from "react-icons/si";
 import { DiJava } from "react-icons/di";
-import { FaDatabase } from "react-icons/fa";
+import { FaDatabase, FaAws } from "react-icons/fa";
 import { TbChartAreaLineFilled } from "react-icons/tb";
 import type { IconType } from "react-icons";
 
@@ -33,7 +37,7 @@ type Skill = {
   frameworks?: Framework[];
 };
 
-const skills: Skill[] = [
+const languages: Skill[] = [
   {
     name: "Python",
     icon: SiPython,
@@ -72,12 +76,6 @@ const skills: Skill[] = [
     ],
   },
   {
-    name: "Firebase",
-    icon: SiFirebase,
-    color: "#FFCA28",
-    bg: "#FFFBE6",
-  },
-  {
     name: "Java",
     icon: DiJava,
     color: "#ED8B00",
@@ -85,8 +83,19 @@ const skills: Skill[] = [
   },
 ];
 
+const technologies: Skill[] = [
+  { name: "Docker",     icon: SiDocker,     color: "#2496ED", bg: "#EBF5FE" },
+  { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5", bg: "#EBF0FD" },
+  { name: "AWS",        icon: FaAws,        color: "#FF9900", bg: "#FFF4E0" },
+  { name: "Git",        icon: SiGit,        color: "#F05032", bg: "#FEF0EC" },
+  { name: "GitHub",     icon: SiGithub,     color: "#181717", bg: "#F0F0F0" },
+  { name: "Firebase",   icon: SiFirebase,   color: "#FFCA28", bg: "#FFFBE6" },
+];
+
 export default function Hero() {
   const [hovered, setHovered] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<"languages" | "technologies">("languages");
+  const displayed = activeTab === "languages" ? languages : technologies;
 
   return (
     <section id="home" className="min-h-screen flex flex-col justify-center pt-20">
@@ -134,13 +143,31 @@ export default function Hero() {
         {/* Divider */}
         <div className="flex items-center gap-4 mb-8">
           <div className="h-px flex-1 bg-parchment-dark" />
-          <p className="font-sans text-xs text-espresso/40 tracking-widest uppercase">Technologies</p>
+          <p className="font-sans text-xs text-espresso/40 tracking-widest uppercase">Skills</p>
           <div className="h-px flex-1 bg-parchment-dark" />
+        </div>
+
+        {/* Tab toggle */}
+        <div className="flex gap-2 mb-6 justify-center">
+          {(["languages", "technologies"] as const).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => { setActiveTab(tab); setHovered(null); }}
+              className="px-5 py-2 rounded-full font-sans text-sm font-semibold transition-colors capitalize"
+              style={
+                activeTab === tab
+                  ? { backgroundColor: "var(--color-espresso, #3B2314)", color: "var(--color-cream, #FAF6EF)" }
+                  : { backgroundColor: "transparent", color: "var(--color-espresso, #3B2314)", border: "1px solid rgba(59,35,20,0.2)" }
+              }
+            >
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </button>
+          ))}
         </div>
 
         {/* Skills grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {skills.map(({ name, icon: Icon, color, bg, frameworks }) => (
+          {displayed.map(({ name, icon: Icon, color, bg, frameworks }) => (
             <div
               key={name}
               className="relative"

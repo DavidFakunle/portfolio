@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const experiences = [
   {
-    role: "Data Engineering Intern",
+    role: "Business Systems Analyst Intern",
     company: "Stewart Title",
     location: "Houston, TX",
     dates: "June 2026 – Aug 2026",
