@@ -2,55 +2,52 @@ import Image from "next/image";
 
 const albums = [
   {
-    title: "BELOVED",
-    artist: "Giveon",
+    title: "ICEMAN",
+    artist: "Drake",
     year: "2026",
     artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/47/03/4c/47034c71-831b-61a2-8cc2-502f927834bd/196873057620.jpg/600x600bb.jpg",
-    appleMusic: "https://music.apple.com/us/album/beloved/1815356726",
+      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/35/b9/06/35b90629-a873-14f8-4789-ffc324960038/26UMGIM63614.rgb.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/iceman/6769568449",
   },
   {
-    title: "With No Due Respect",
-    artist: "FoggieRaw",
+    title: "CAOS",
+    artist: "Miguel",
+    year: "2025",
+    artwork:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/20/eb/be/20ebbe93-cdd5-72f0-5f80-4e5149dfe231/196871232944.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/caos/1836281105",
+  },
+  {
+    title: "M$NEY",
+    artist: "Asake",
     year: "2026",
     artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/94/c1/af/94c1af0b-1cd5-1a3a-a762-67e381c31358/26UMGIM07433.rgb.jpg/600x600bb.jpg",
-    appleMusic:
-      "https://music.apple.com/us/album/with-no-due-respect/1871674817",
+      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/31/e4/eb/31e4ebf4-97bd-c193-59c7-1b72ed7ab53a/ticket.wlorjbae.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/m%24ney/1891869190",
   },
   {
-    title: "2014 Forest Hills Drive",
+    title: "BELOVED: ACT II",
+    artist: "GIVĒON",
+    year: "2026",
+    artwork:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/06/11/cc/0611cc52-0b9f-6f3a-8387-f9132ba9825b/196874175637.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/beloved-act-ii/1891467233",
+  },
+  {
+    title: "The Fall-Off",
     artist: "J. Cole",
-    year: "2014",
-    artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ee/28/67/ee286794-6c33-a8c2-5c37-c04f1cb5e8a6/21UM1IM54415.rgb.jpg/600x600bb.jpg",
-    appleMusic:
-      "https://music.apple.com/us/album/2014-forest-hills-drive/1600772499",
-  },
-  {
-    title: "Bully",
-    artist: "Ye",
     year: "2026",
     artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4c/78/0e/4c780ef8-f9cf-62f2-b956-2ceab8b81905/0692788731278_cover.jpg/600x600bb.jpg",
-    appleMusic: "https://music.apple.com/us/album/bully/1888707282",
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/de/94/4b/de944b82-ef5a-2f5b-4af7-e30c05ae1eac/26UMGIM15402.rgb.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/the-fall-off/1875080726",
   },
   {
-    title: "It's Us Vol. 2",
-    artist: "Concrete Boys",
-    year: "2026",
+    title: "Son Of Spergy",
+    artist: "Daniel Caesar",
+    year: "2025",
     artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/36/0e/28/360e284d-5d6d-1970-d500-5797488996f0/26BMR0007733.rgb.jpg/600x600bb.jpg",
-    appleMusic: "https://music.apple.com/us/album/its-us-vol-2/1878016122",
-  },
-  {
-    title: "We're All Alone in This Together",
-    artist: "Dave",
-    year: "2021",
-    artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e7/75/65/e7756565-3351-60a3-562a-8f168f64c2b4/00602438588909_Cover.jpg/600x600bb.jpg",
-    appleMusic:
-      "https://music.apple.com/gb/album/were-all-alone-in-this-together/1839573796",
+      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3b/c0/c5/3bc0c51d-33f2-ee19-e148-6d8f2c50df24/25UMGIM90843.rgb.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/son-of-spergy/1839352404",
   },
 ];
 
@@ -69,7 +66,7 @@ function VinylIcon() {
 export default function Music() {
   return (
     <section id="music" className="min-h-screen flex flex-col justify-center">
-      <div className="max-w-3xl mx-auto px-6 py-24">
+      <div className="w-full px-12 py-24">
         <div className="mb-12">
           <p className="font-sans text-sm text-latte tracking-widest uppercase mb-2 flex items-center gap-2">
             <VinylIcon />
@@ -81,7 +78,7 @@ export default function Music() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-8">
           {albums.map((album) => (
             <a
               key={album.title}
@@ -96,7 +93,7 @@ export default function Music() {
                   alt={`${album.title} by ${album.artist}`}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 640px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/20">
                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">

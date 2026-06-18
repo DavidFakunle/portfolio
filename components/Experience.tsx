@@ -7,10 +7,10 @@ const experiences = [
     location: "Houston, TX",
     dates: "June 2026 – Aug 2026",
     bullets: [
-      "Used SQL to analyze large title insurance and property datasets, reducing lookup time by 30%.",
-      "Cleaned and updated 10,000+ records related to property ownership, improving data quality.",
-      "Built SQL reports that reduced manual work by 40% and accelerated title insurance processing.",
-    ],
+      "Designed in Figma and built an Angular web application that automates how apps get approved at Stewart Title, using Claude API to instantly check applications against company standards, reducing review time by 80% for critical business systems",
+      "Researched and organized architectural standards that were previously scattered across documents into one unified reference guide, enabling the system to automatically verify compliance instead of requiring manual review.",
+      "Architected a Claude API system that automatically analyzes applications against company standards, flags issues with confidence levels, and lets the review team focus on complex cases instead of routine checks, improving 80% of daily approval workflows."
+    ]
   },
   {
     role: "Information Technology Intern",
