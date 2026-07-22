@@ -103,12 +103,12 @@ export default function Hero() {
       <div className="max-w-3xl mx-auto px-6 py-16 w-full">
 
         {/* Intro */}
-        <div className="flex items-center justify-between gap-6 mb-6">
+        <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-6 mb-6 text-center sm:text-left">
           <div>
             <p className="font-sans text-sm text-latte tracking-widest uppercase mb-2">
               Hey, I&apos;m
             </p>
-            <h1 className="font-serif text-6xl md:text-7xl font-bold text-espresso leading-tight">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-bold text-espresso leading-tight">
               David Fakunle
             </h1>
           </div>
@@ -117,7 +117,7 @@ export default function Hero() {
             alt="David Fakunle"
             width={176}
             height={176}
-            className="w-32 h-32 md:w-44 md:h-44 rounded-full object-cover border-2 border-parchment-dark shrink-0"
+            className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 rounded-full object-cover border-2 border-parchment-dark shrink-0 mx-auto sm:mx-0"
             priority
           />
         </div>

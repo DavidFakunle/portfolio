@@ -2,52 +2,51 @@ import Image from "next/image";
 
 const albums = [
   {
-    title: "ICEMAN",
-    artist: "Drake",
-    year: "2026",
+    title: "Split Decision - EP",
+    artist: "Dave & Central Cee",
+    year: "2023",
     artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/35/b9/06/35b90629-a873-14f8-4789-ffc324960038/26UMGIM63614.rgb.jpg/600x600bb.jpg",
-    appleMusic: "https://music.apple.com/us/album/iceman/6769568449",
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/af/50/f0/af50f07c-e1e4-6a88-6eac-3c2a1f1787e5/00602455951250_Cover.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/split-decision-ep/1839470018",
   },
   {
-    title: "CAOS",
-    artist: "Miguel",
+    title: "Oh yeah?",
+    artist: "Steve Lacy",
+    year: "2026",
+    artwork:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1c/b2/46/1cb246db-afae-a599-d377-44a7ea7267fa/196874346976.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/oh-yeah/6773775032",
+  },
+  {
+    title: "Mama's Gun",
+    artist: "Erykah Badu",
+    year: "2000",
+    artwork:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/63/9c/05/639c0568-e961-2146-f4cb-819a1f9226d3/06UMGIM01547.rgb.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/mamas-gun/1440755899",
+  },
+  {
+    title: "sankofa",
+    artist: "redveil",
     year: "2025",
-    artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/20/eb/be/20ebbe93-cdd5-72f0-5f80-4e5149dfe231/196871232944.jpg/600x600bb.jpg",
-    appleMusic: "https://music.apple.com/us/album/caos/1836281105",
+    artwork: "https://f4.bcbits.com/img/a1514312978_10.jpg",
+    appleMusic: "https://music.apple.com/bm/album/sankofa/1852628084",
   },
   {
-    title: "M$NEY",
-    artist: "Asake",
-    year: "2026",
+    title: "IGOR",
+    artist: "Tyler, The Creator",
+    year: "2019",
     artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/31/e4/eb/31e4ebf4-97bd-c193-59c7-1b72ed7ab53a/ticket.wlorjbae.jpg/600x600bb.jpg",
-    appleMusic: "https://music.apple.com/us/album/m%24ney/1891869190",
+      "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0c/06/05/0c060581-6242-6a2a-a677-20170f2cf8da/886447710180.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/igor/1463409338",
   },
   {
-    title: "BELOVED: ACT II",
-    artist: "GIVĒON",
-    year: "2026",
+    title: "Got to Be There (2013 Remaster)",
+    artist: "Michael Jackson",
+    year: "1972",
     artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/06/11/cc/0611cc52-0b9f-6f3a-8387-f9132ba9825b/196874175637.jpg/600x600bb.jpg",
-    appleMusic: "https://music.apple.com/us/album/beloved-act-ii/1891467233",
-  },
-  {
-    title: "The Fall-Off",
-    artist: "J. Cole",
-    year: "2026",
-    artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/de/94/4b/de944b82-ef5a-2f5b-4af7-e30c05ae1eac/26UMGIM15402.rgb.jpg/600x600bb.jpg",
-    appleMusic: "https://music.apple.com/us/album/the-fall-off/1875080726",
-  },
-  {
-    title: "Son Of Spergy",
-    artist: "Daniel Caesar",
-    year: "2025",
-    artwork:
-      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3b/c0/c5/3bc0c51d-33f2-ee19-e148-6d8f2c50df24/25UMGIM90843.rgb.jpg/600x600bb.jpg",
-    appleMusic: "https://music.apple.com/us/album/son-of-spergy/1839352404",
+      "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/6c/3c/86/6c3c860b-0e0a-f016-1adc-44d8e3ff0144/00602537386796.rgb.jpg/600x600bb.jpg",
+    appleMusic: "https://music.apple.com/us/album/got-to-be-there-2013-remaster/1442259586",
   },
 ];
 

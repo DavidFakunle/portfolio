@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.metmuseum.org",
       },
+      {
+        protocol: "https",
+        hostname: "*.bcbits.com",
+      },
     ],
   },
 };

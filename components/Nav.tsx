@@ -12,6 +12,7 @@ const tabs = [
 
 export default function Nav() {
   const [active, setActive] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const sections = tabs.map((t) => t.href.slice(1));
@@ -40,7 +41,8 @@ export default function Nav() {
           David Fakunle
         </a>
 
-        <div className="flex items-center gap-6">
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-6">
           {tabs.map((tab) => (
             <a
               key={tab.href}
@@ -79,7 +81,70 @@ export default function Nav() {
             </a>
           </div>
         </div>
+
+        {/* Mobile hamburger */}
+        <button
+          type="button"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          className="md:hidden inline-flex items-center justify-center w-9 h-9 text-espresso"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            {menuOpen ? (
+              <path d="M18 6 6 18M6 6l12 12" />
+            ) : (
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            )}
+          </svg>
+        </button>
       </div>
+
+      {/* Mobile dropdown */}
+      {menuOpen && (
+        <div className="md:hidden border-t border-parchment-dark bg-cream/95 backdrop-blur-sm">
+          <div className="max-w-3xl mx-auto px-6 py-4 flex flex-col gap-4">
+            {tabs.map((tab) => (
+              <a
+                key={tab.href}
+                href={tab.href}
+                onClick={() => setMenuOpen(false)}
+                className={`nav-link text-base font-sans text-espresso/70 hover:text-espresso ${
+                  active === tab.href.slice(1) ? "active text-espresso" : ""
+                }`}
+              >
+                {tab.label}
+              </a>
+            ))}
+
+            <div className="flex items-center gap-4 pt-3 border-t border-parchment-dark">
+              <a
+                href="mailto:dfakunle06@gmail.com"
+                aria-label="Email"
+                className="text-espresso/50 hover:text-latte transition-colors"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/david-fakunle/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-espresso/50 hover:text-latte transition-colors"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
