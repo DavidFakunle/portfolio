@@ -121,13 +121,13 @@ export default function Hero() {
             priority
           />
         </div>
-        <p className="font-sans text-xl text-espresso/70 leading-relaxed max-w-xl mb-10">
+        <p className="font-sans text-xl text-espresso/70 leading-relaxed max-w-xl mb-10 text-center sm:text-left mx-auto sm:mx-0">
           CS student at the University of North Texas, building things that matter.
           I like clean code, good art, and apps that actually work and have an impact.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-wrap gap-4 mb-16">
+        <div className="flex flex-wrap gap-4 mb-16 justify-center sm:justify-start">
           <a
             href="mailto:dfakunle06@gmail.com"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-espresso text-cream text-sm font-sans hover:bg-latte transition-colors"
