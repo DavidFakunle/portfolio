@@ -65,7 +65,7 @@ function VinylIcon() {
 export default function Music() {
   return (
     <section id="music" className="min-h-screen flex flex-col justify-center">
-      <div className="w-full px-12 py-24">
+      <div className="max-w-3xl mx-auto px-6 py-24">
         <div className="mb-12">
           <p className="font-sans text-sm text-latte tracking-widest uppercase mb-2 flex items-center gap-2">
             <VinylIcon />
