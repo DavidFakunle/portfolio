@@ -8,6 +8,24 @@ const projects = [
     dates: "2024 – Present",
     badge: "App Store",
   },
+  {
+    name: "FinLingo",
+    description:
+      "Gamified financial-literacy iOS app teaching budgeting, investing, and credit through interactive lessons and a personalized month-by-month money-life simulation. Learn Mode features 3 question formats tied to an in-game cash economy, plus \"Practice this\" deep-links to finance simulators (401(k), debt payoff, emergency fund). Built with a guided first-run onboarding tour and Codable/JSON save persistence.",
+    tags: ["Swift", "SwiftUI", "SpriteKit", "Git"],
+    link: "https://devpost.com/software/finlingo-uwbpt0?ref_content=my-projects-tab&ref_feature=my_projects",
+    dates: "July 2026",
+    badge: "FidHacks 2026",
+  },
+  {
+    name: "NFL Game Winner Prediction",
+    description:
+      "End-to-end ML system predicting NFL winners from 5 seasons of historical data, engineering features like team performance, rest days, and defense rankings, and training an XGBoost model to forecast outcomes. Deployed as a production Flask API with a React frontend, with a GitHub Actions pipeline that retrains the model weekly with new game results.",
+    tags: ["Python", "XGBoost", "Flask", "React", "Pandas", "Scikit-learn"],
+    link: undefined,
+    dates: "June 2026",
+    badge: "In Development",
+  },
 ];
 
 export default function Projects() {
@@ -20,42 +38,61 @@ export default function Projects() {
         </div>
 
         <div className="grid grid-cols-1 gap-6">
-          {projects.map((project) => (
-            <a
-              key={project.name}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block bg-parchment border border-parchment-dark rounded-2xl p-6 hover:border-latte/40 hover:shadow-lg hover:shadow-latte/10 transition-all duration-300"
-            >
-              <div className="flex items-start justify-between gap-4 mb-3">
-                <div>
-                  <h3 className="font-serif text-2xl font-semibold text-espresso group-hover:text-latte transition-colors">
-                    {project.name}
-                  </h3>
-                  <span className="text-xs font-sans text-espresso/40">{project.dates}</span>
-                </div>
-                <span className="shrink-0 text-xs font-sans px-3 py-1 bg-espresso/8 border border-espresso/10 rounded-full text-espresso/60">
-                  {project.badge}
-                </span>
-              </div>
+          {projects.map((project) => {
+            const cardClassName =
+              "group block bg-parchment border border-parchment-dark rounded-2xl p-6 hover:border-latte/40 hover:shadow-lg hover:shadow-latte/10 transition-all duration-300";
 
-              <p className="font-sans text-sm text-espresso/65 leading-relaxed mb-5">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2.5 py-0.5 text-xs font-sans text-latte bg-cream border border-parchment-dark rounded-full"
-                  >
-                    {tag}
+            const cardContent = (
+              <>
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <div>
+                    <h3 className="font-serif text-2xl font-semibold text-espresso group-hover:text-latte transition-colors">
+                      {project.name}
+                    </h3>
+                    <span className="text-xs font-sans text-espresso/40">{project.dates}</span>
+                  </div>
+                  <span className="shrink-0 text-xs font-sans px-3 py-1 bg-espresso/8 border border-espresso/10 rounded-full text-espresso/60">
+                    {project.badge}
                   </span>
-                ))}
+                </div>
+
+                <p className="font-sans text-sm text-espresso/65 leading-relaxed mb-5">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-0.5 text-xs font-sans text-latte bg-cream border border-parchment-dark rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </>
+            );
+
+            if (project.link) {
+              return (
+                <a
+                  key={project.name}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cardClassName}
+                >
+                  {cardContent}
+                </a>
+              );
+            }
+
+            return (
+              <div key={project.name} className={cardClassName}>
+                {cardContent}
               </div>
-            </a>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

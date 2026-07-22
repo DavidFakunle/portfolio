@@ -7,9 +7,9 @@ const experiences = [
     location: "Houston, TX",
     dates: "June 2026 – Aug 2026",
     bullets: [
-      "Designed in Figma and built an Angular web application that automates how apps get approved at Stewart Title, using Claude API to instantly check applications against company standards, reducing review time by 80% for critical business systems",
+      "Designed in Figma and built an Angular web application that automates how apps get approved at Stewart Title, using Claude API to instantly check applications against company standards, reducing review time by 80% for critical business systems.",
       "Researched and organized architectural standards that were previously scattered across documents into one unified reference guide, enabling the system to automatically verify compliance instead of requiring manual review.",
-      "Architected a Claude API system that automatically analyzes applications against company standards, flags issues with confidence levels, and lets the review team focus on complex cases instead of routine checks, improving 80% of daily approval workflows."
+      "Built confidence-scored issue flagging that routes routine approvals through automatically and surfaces only complex cases for the review team."
     ]
   },
   {
@@ -18,9 +18,9 @@ const experiences = [
     location: "Richmond, TX",
     dates: "June 2025 – Aug 2025",
     bullets: [
-      "Resolved 200+ IT support tickets in ServiceNow, diagnosing hardware, software, and account issues.",
-      "Partnered with the GIS team to digitize and map 150+ schools for county-wide spatial analysis.",
-      "Collaborated with AV team to operate 10+ audio/video systems during a mock Commissioner's Court trial.",
+      "Resolved technical issues across county departments by managing the full ticket lifecycle - creating, tracking, and closing requests in ServiceNow and reducing average resolution time by 70%.",
+      "Supported data-driven planning and decision-making by collaborating with the GIS team to map and analyze 100+ school locations across the Fort Bend district, producing datasets and visualizations used for resource planning.",
+      "Expanded technical support coverage by building personal portfolio sites in WordPress/HTML and assisting the AV team in configuring microphones and cameras for a commissioner court trial, achieving 100% equipment uptime during the live session.",
     ],
   },
   {

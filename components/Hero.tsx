@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   SiPython,
   SiJavascript,
@@ -102,12 +103,24 @@ export default function Hero() {
       <div className="max-w-3xl mx-auto px-6 py-16 w-full">
 
         {/* Intro */}
-        <p className="font-sans text-sm text-latte tracking-widest uppercase mb-4">
-          Hey, I&apos;m
-        </p>
-        <h1 className="font-serif text-6xl md:text-7xl font-bold text-espresso leading-tight mb-6">
-          David Fakunle
-        </h1>
+        <div className="flex items-center justify-between gap-6 mb-6">
+          <div>
+            <p className="font-sans text-sm text-latte tracking-widest uppercase mb-2">
+              Hey, I&apos;m
+            </p>
+            <h1 className="font-serif text-6xl md:text-7xl font-bold text-espresso leading-tight">
+              David Fakunle
+            </h1>
+          </div>
+          <Image
+            src="/david-headshot.jpg"
+            alt="David Fakunle"
+            width={176}
+            height={176}
+            className="w-32 h-32 md:w-44 md:h-44 rounded-full object-cover border-2 border-parchment-dark shrink-0"
+            priority
+          />
+        </div>
         <p className="font-sans text-xl text-espresso/70 leading-relaxed max-w-xl mb-10">
           CS student at the University of North Texas, building things that matter.
           I like clean code, good art, and apps that actually work and have an impact.
