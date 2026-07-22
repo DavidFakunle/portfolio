@@ -16,8 +16,28 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://davidfakunle.com"),
   title: "David Fakunle",
   description: "CS student, builder, coffee enjoyer.",
+  openGraph: {
+    title: "David Fakunle",
+    description: "CS student, builder, coffee enjoyer.",
+    url: "https://davidfakunle.com",
+    siteName: "David Fakunle",
+    images: [
+      {
+        url: "/david-headshot.jpg",
+        width: 700,
+        height: 560,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "David Fakunle",
+    description: "CS student, builder, coffee enjoyer.",
+    images: ["/david-headshot.jpg"],
+  },
 };
 
 export default function RootLayout({
