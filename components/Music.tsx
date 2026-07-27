@@ -30,7 +30,7 @@ const albums = [
     artist: "redveil",
     year: "2025",
     artwork: "https://f4.bcbits.com/img/a1514312978_10.jpg",
-    appleMusic: "https://music.apple.com/bm/album/sankofa/1852628084",
+    appleMusic: "https://music.apple.com/us/album/sankofa/1884734946",
   },
   {
     title: "IGOR",
